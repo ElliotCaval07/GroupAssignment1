@@ -12,6 +12,15 @@ h1 {
 
 h2 {
     text-align: center;
-    color: orange
+    color: orange;
 }
+
+
+
+#logo {
+   float: right;
+   width: 170px;
+   height: auto;
+}
+
 
