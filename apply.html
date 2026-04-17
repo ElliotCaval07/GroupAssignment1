@@ -6,7 +6,7 @@
   <meta name="keywords" content="HTML, Form, MediZen, employment, application" >
   <meta name="author" content="Jaxon Del Mastro"  >
   <title>MediZen job aplication form</title>
-    <link rel="stylesheet" href="styles\images/index.css">
+    <link rel="stylesheet" href="styles/images/index.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,7 @@
          <a href="#Background">Background</a>
         </nav>
     </header>
-<!-- Company logo goes here -->
+
 
     <h4>Those interested in seeking employment at MediZen are required to fill out the following form in full.</h4>
     <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
@@ -30,13 +30,156 @@
         </p>
         
         <fieldset>
-            <legend>Applicant details</legend>
+            <legend class="field-head">Applicant details</legend>
             <p>
                 <label for="firstname">First Name</label>
                 <input type="text" name= "firstname" id="firstname" pattern="[a-zA-Z]{1-20}" required="required">
+                <label for="lastname">Last Name</label>
+                <input type="text" name= "lastname" id="lastname" pattern="[a-zA-Z]{1-20}" required="required">
+            </p>
+            <p>
+                <label for="dob">Date Of Birth</label>
+                <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required="required">
+            </p>
+
+            <style>
+                .gender-field{
+                    display: inline-block;
+                }
+            </style>
+
+
+            <fieldset class="gender-field">
+                <legend>Gender:</legend>
+
+                <label for="male">Male</label> 
+				<input type="radio" id="male" name="gender" value="male" required="required">
+                <label for="female">Female</label> 
+				<input type="radio" id="female" name="gender" value="female" required="required">
+                <label for="other">Other</label> 
+				<input type="radio" id="other" name="gender" value="other" required="required">
+            </fieldset>
+            <p>
+                <label for="phonenum">Phone number</label>
+                <input type="text" name= "phonenum" id="phonenum" pattern="[0-9]{8-12}" required="required">
+                <label for="email">Email</label>
+                <input type="email" name= "email" id="email"  required="required">
             </p>
 
         </fieldset>
+
+        <fieldset>
+            <legend class="field-head">Address</legend>
+            <p>
+                <label for="street">Street Address</label>
+                <input type="text" name= "street" id="street" pattern="[a-zA-Z0-9]{1-40}" required="required">
+                <label for="suburb">Suburb/Town</label>
+                <input type="text" name= "suburb" id="suburb" pattern="[a-zA-Z0-9]{1-40}" required="required">
+            </p>
+            <p>
+                <label for="postcode">Postcode</label>
+                <input type="text" name= "postcode" id="postcode" pattern="[0-9]{4}" required="required">
+                <label for="state">State/Territory</label>
+                <select name="postcode" id="postcode" required="required">
+                    <option value="">Please Select</option>			
+				    <option value="vic">VIC</option>
+				    <option value="nsw">NSW</option>
+				    <option value="qld">QLD</option>
+				    <option value="nt">NT</option>
+				    <option value="wa">WA</option>
+				    <option value="sa">SA</option>
+                    <option value="tas">TAS</option>
+				    <option value="act">ACT</option>
+                </select>
+            </p>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend class="field-head">Skills</legend>
+            <style>
+                .skill-fields {
+                    display: flex;
+                    gap: 10px; 
+                }
+
+                .skill-fields fieldset {
+                    flex: 1; 
+                    box-sizing: border-box;
+                }
+            </style>
+
+
+
+            <div class="skill-fields">
+                <fieldset>
+                    <legend>Healthcare & Compliance</legend>
+
+                    <label for="medical_terminology">Medical terminology (basic understanding)</label> 
+				    <input type="checkbox" id="medical_terminology" name="skills[]" value="medical_terminology"><br>
+                    <label for="health_safety">Health & safety procedures</label> 
+				    <input type="checkbox" id="health_safety" name="skills[]" value="health_safety"><br>
+                    <label for="infection_control">Infection control awareness</label> 
+				    <input type="checkbox" id="infection_control" name="skills[]" value="infection_control"><br>
+                    <label for="documentation">Documentation & record keeping</label> 
+				    <input type="checkbox" id="documentation" name="skills[]" value="documentation"><br>
+                    <label for="patient_workflows">Understanding of patient care workflows</label> 
+				    <input type="checkbox" id="patient_workflows" name="skills[]" value="patient_workflows"><br>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Technical / Digital Skills</legend>
+
+                    <label for="office_workspace">Microsoft Office / Google Workspace</label> 
+				    <input type="checkbox" id="office_workspace" name="skills[]" value="office_workspace"><br>
+                    <label for="cybersecurity">Cybersecurity awareness</label> 
+				    <input type="checkbox" id="cybersecurity" name="skills[]" value="cybersecurity"><br>
+                    <label for="data_entry">Data entry & accuracy</label> 
+				    <input type="checkbox" id="data_entry" name="skills[]" value="data_entry"><br>
+                    <label for="ehr_systems">Electronic Health Records systems</label> 
+				    <input type="checkbox" id="ehr_systems" name="skills[]" value="ehr_systems"><br>
+                    <label for="scheduling_systems">Digital scheduling systems</label> 
+				    <input type="checkbox" id="scheduling_systems" name="skills[]" value="scheduling_systems"><br>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Misc</legend>
+
+                    <label for="first_aid">First Aid / CPR certification</label> 
+				    <input type="checkbox" id="first_aid" name="skills[]" value="first_aid"><br>
+                    <label for="customer_service">Experience with customer service</label> 
+				    <input type="checkbox" id="customer_service" name="skills[]" value="customer_service"><br>
+                    <label for="healthcare_wellness">Experience in healthcare or wellness settings</label> 
+				    <input type="checkbox" id="healthcare_wellness" name="skills[]" value="healthcare_wellness"><br>
+                    <label for="multilingual">Multilingual communication</label> 
+				    <input type="checkbox" id="multilingual" name="skills[]" value="multilingual"><br>
+                    <label for="knowledge_nutrition">Knowledge of nutrition basics</label> 
+				    <input type="checkbox" id="knowledge_nutrition" name="skills[]" value="knowledge_nutrition"><br>
+                    
+                </fieldset>
+
+
+            </div>
+
+            <style>
+                .block {
+                    display: block;
+                }
+            </style>
+
+            <p>
+                <label for="other_skills" class="block">Other Skills</label> 
+			    <textarea id="other_skills" name="other_skills" rows="4" cols="40"></textarea>
+		    </p>
+
+
+
+        </fieldset>
+
+
 
 
 
