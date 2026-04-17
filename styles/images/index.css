@@ -1,7 +1,9 @@
 nav a {
 
-    border: 4px solid green
-    
+    border: 4px solid lightgrey;
+    border-radius: 5%;
+    background-color: lightgray;
+  
 }
 
 h1 {
@@ -17,6 +19,7 @@ h2 {
 
 
 
+
 #logo {
    float: right;
    width: 170px;
@@ -26,3 +29,12 @@ h2 {
 .field-head {
     font-weight: bold;
 }
+  .search{
+    margin-left: auto;
+    position: absolute;
+    right: 0
+ }
+
+ html{
+    background-color: #baed91;
+ }
