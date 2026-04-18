@@ -69,3 +69,7 @@ table, tbody, thead {
    border: 1px solid black; 
    margin: 0 auto;
 }
+
+.backImage{
+  background-image: url('MediZenLogo.jpeg');
+}
