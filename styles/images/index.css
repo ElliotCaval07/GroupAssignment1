@@ -73,3 +73,9 @@ table, tbody, thead {
 .backImage{
   background-image: url('MediZenLogo.jpeg');
 }
+
+ tr:hover {
+      background-color: #e8f4f8;
+      cursor: pointer;
+      border-radius: 5%;
+    }
