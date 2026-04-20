@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 
-<!--Generative AI was used to assist the creation of this page-->
-
 <head>
+  <!--Generative AI was used to assist the creation of this page-->
+
   <meta charset="utf-8">
   <meta name="description" content="About page for MediZen">
-  <meta name="keywords" content="HTML, MediZen, about, Home">
+  <meta name="keywords" content="HTML, MediZen, About, Team, J.E.K">
   <meta name="author" content="Elliot Caval">
-  <title>About Us</title>
+  <title>About Us - MediZen</title>
   <link rel="stylesheet" href="styles/images/index.css">
 
   <style>
@@ -19,6 +19,7 @@
       max-width: 400px;
     }
 
+    /* Make image fit inside the figure */
     figure img {
       width: 100%;
     }
@@ -49,13 +50,19 @@
       background-color: #e8f4f8;
     }
 
+    /* Section styling for consistancy */
     section {
       border: 2px solid black;
       border-radius: 10px;
       padding: 10px;
-      margin: 10px 0;
+      margin: 20px 0;
       width: 50%;
     }
+
+    /* Member list styling */
+    .member-list dt {
+      font-weight: bold;
+      margin-top: 10px;
   </style>
 
 </head>
@@ -74,6 +81,7 @@
     </nav>
   </header>
 
+  <!-- Group and class details using nested list -->
   <section>
     <ul>
       <li>Group Name
@@ -91,8 +99,7 @@
     </ul>
   </section>
 
-  <br>
-
+  <!-- Member contributions and quotes using definition list -->
   <section>
     <dl class="member-list">
 
@@ -133,41 +140,41 @@
     </dl>
   </section>
 
-  <br>
+  <!-- Fun facts table with caption -->
+  <section>
+    <table class="fun-facts-table">
+      <caption>Fun Facts About Our Team</caption>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Fun Fact</th>
+          <th scope="col">Favourite Coding Snack</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Elliot</th>
+          <td>Owns over 3,000 LEGO minifigures</td>
+          <td>Tim Tams</td>
+        </tr>
+        <tr>
+          <th scope="row">Jaxon</th>
+          <td>Can solve a Rubik's Cube in under 10 seconds</td>
+          <td>Cheese and crackers</td>
+        </tr>
+        <tr>
+          <th scope="row">Kevin</th>
+          <td>Is unemployed</td>
+          <td>Ramen</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-  <table class="fun-facts-table">
-    <caption>Fun Facts About Our Team</caption>
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Fun Fact</th>
-        <th scope="col">Favourite Coding Snack</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">Elliot</th>
-        <td>Owns over 3,000 LEGO minifigures</td>
-        <td>Tim Tams</td>
-      </tr>
-      <tr>
-        <th scope="row">Jaxon</th>
-        <td>Can solve a Rubik's Cube in under 10 seconds</td>
-        <td>Cheese and crackers</td>
-      </tr>
-      <tr>
-        <th scope="row">Kevin</th>
-        <td>Is unemployed</td>
-        <td>Ramen</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <br>
-
-  <figure class="group-photo">
+  <!-- Team photo (using logo as placeholder) using inline CSS -->
+  <figure>
     <img src="styles/images/MediZenLogo.jpeg" alt="MediZen team logo representing Group J.E.K">
-    <figcaption>
+    <figcaption style="font-style: italic;">
       Team J.E.K - the three-person team behind MediZen.
       Bringing together skills in web development, design,
       and digital healthcare to build this recruitment platform.
@@ -181,9 +188,9 @@
         for our Jira</a></p>
     <p><a href="https://github.com/ElliotCaval07/GroupAssignment1">Click here for our GitHub</a></p>
     <p>Email Link Here: JekEmployment@MediZen.com.bw</p>
+
   </footer>
 
-  <h2 id="acknowledges">Acknowledgement of Country</h2>
   <p>
     MediZen acknowledges the Wurundjeri people of the Kulin Nation as the
     Traditional Owners of the land where we work and study. We pay our respects
