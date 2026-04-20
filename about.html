@@ -32,6 +32,7 @@
     /* Table with hex colour and hover */
     table {
       border: 1px solid #cccccc;
+      margin: 0;
     }
 
     table th {
@@ -46,6 +47,14 @@
 
     table tr:hover {
       background-color: #e8f4f8;
+    }
+
+    section {
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px 0;
+      width: 50%;
     }
   </style>
 
@@ -65,57 +74,66 @@
     </nav>
   </header>
 
-  <ul>
-    <li>Group Name
-      <ul>
-        <li>J.E.K</li>
-      </ul>
-    </li>
-    <li>Class Details
-      <ul>
-        <li>Wednesday</li>
-        <li>4:30pm - 6:30pm</li>
-        <li>Tutor: Rahul</li>
-      </ul>
-    </li>
-  </ul>
+  <section>
+    <ul>
+      <li>Group Name
+        <ul>
+          <li>J.E.K</li>
+        </ul>
+      </li>
+      <li>Class Details
+        <ul>
+          <li>Wednesday</li>
+          <li>4:30pm - 6:30pm</li>
+          <li>Tutor: Rahul</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-  <dl class="member-list">
+  <br>
 
-    <dt>
-      Elliot Caval
-      <span class="student-id">106513795</span>
-    </dt>
-    <dd>
-      <p><strong>Contribution:</strong> Developed index.html, about.html, set up the project structure, and created the
-        shared
-        header and footer.</p>
-      <p><strong>Quote (Indonesian):</strong> <q lang="id">Nama saya Elliot</q></p>
-      <p><strong>English:</strong> <q>My name is Elliot</q></p>
-    </dd>
+  <section>
+    <dl class="member-list">
 
-    <dt>
-      Jaxon Del Mastro
-      <span class="student-id">106XXXXXX</span>
-    </dt>
-    <dd>
-      <p><strong>Contribution:</strong> Developed apply.html and jobs.html.</p>
-      <p><strong>Quote (German):</strong> <q lang="de">Guten Morgen</q></p>
-      <p><strong>English:</strong> <q>Good morning</q></p>
-    </dd>
+      <dt>
+        Elliot Caval
+        <span class="student-id">106513795</span>
+      </dt>
+      <dd>
+        <p><strong>Contribution:</strong> Developed index.html, about.html, set up the project structure, and created
+          the
+          shared
+          header and footer.</p>
+        <p><strong>Quote (Indonesian):</strong> <q lang="id">Nama saya Elliot</q></p>
+        <p><strong>English:</strong> <q>My name is Elliot</q></p>
+      </dd>
 
-    <dt>
-      Cheoum Lee (Kevin)
-      <span class="student-id">106523655</span>
-    </dt>
-    <dd>
-      <p><strong>Contribution:</strong> Refactored about.html to meet all brief requirements, wrote the page CSS
-        styling, and ran HTML5 and accessibility validation.</p>
-      <p><strong>Quote (Korean):</strong> <q lang="ko">티끌 모아 태산</q></p>
-      <p><strong>English:</strong> <q>Many small drops make a mighty ocean</q></p>
-    </dd>
+      <dt>
+        Jaxon Del Mastro
+        <span class="student-id">106XXXXXX</span>
+      </dt>
+      <dd>
+        <p><strong>Contribution:</strong> Developed apply.html and jobs.html.</p>
+        <p><strong>Quote (German):</strong> <q lang="de">Guten Morgen</q></p>
+        <p><strong>English:</strong> <q>Good morning</q></p>
+      </dd>
 
-  </dl>
+      <dt>
+        Cheoum Lee (Kevin)
+        <span class="student-id">106523655</span>
+      </dt>
+      <dd>
+        <p><strong>Contribution:</strong> Refactored about.html to meet all brief requirements, wrote the page CSS
+          styling, and ran HTML5 and accessibility validation.</p>
+        <p><strong>Quote (Korean):</strong> <q lang="ko">티끌 모아 태산</q></p>
+        <p><strong>English:</strong> <q>Many small drops make a mighty ocean</q></p>
+      </dd>
+
+    </dl>
+  </section>
+
+  <br>
 
   <table class="fun-facts-table">
     <caption>Fun Facts About Our Team</caption>
@@ -145,18 +163,17 @@
     </tbody>
   </table>
 
-  <section aria-labelledby="team-heading">
-    <h2 id="team-heading">Meet Team J.E.K</h2>
+  <br>
 
-    <figure class="group-photo">
-      <img src="styles/images/MediZenLogo.jpeg" alt="MediZen team logo representing Group J.E.K">
-      <figcaption>
-        Team J.E.K - the three-person team behind MediZen.
-        Bringing together skills in web development, design,
-        and digital healthcare to build this recruitment platform.
-      </figcaption>
-    </figure>
-  </section>
+  <figure class="group-photo">
+    <img src="styles/images/MediZenLogo.jpeg" alt="MediZen team logo representing Group J.E.K">
+    <figcaption>
+      Team J.E.K - the three-person team behind MediZen.
+      Bringing together skills in web development, design,
+      and digital healthcare to build this recruitment platform.
+    </figcaption>
+  </figure>
+
 
   <footer>
 
@@ -166,18 +183,16 @@
     <p>Email Link Here: JekEmployment@MediZen.com.bw</p>
   </footer>
 
-  <section class="acknowledgement" aria-labelledby="acknowledges" style="background-color: #fef5e7; padding: 15px;">
-    <h2 id="acknowledges">Acknowledgement of Country</h2>
-    <p>
-      MediZen acknowledges the Wurundjeri people of the Kulin Nation as the
-      Traditional Owners of the land where we work and study. We pay our respects
-      to their Elders past, present, and emerging.
-    </p>
-    <p>
-      As a healthcare company, we welcome applications from Aboriginal and Torres
-      Strait Islander peoples and value the perspectives they bring to our team.
-    </p>
-  </section>
+  <h2 id="acknowledges">Acknowledgement of Country</h2>
+  <p>
+    MediZen acknowledges the Wurundjeri people of the Kulin Nation as the
+    Traditional Owners of the land where we work and study. We pay our respects
+    to their Elders past, present, and emerging.
+  </p>
+  <p>
+    As a healthcare company, we welcome applications from Aboriginal and Torres
+    Strait Islander peoples and value the perspectives they bring to our team.
+  </p>
 
 </body>
 
