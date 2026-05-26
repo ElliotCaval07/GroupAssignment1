@@ -2,7 +2,7 @@
 <!-- Acknowledgement of Country shown near the bottom of every page. -->
 <!-- File renamed from "anknowledgement.php" to fix the Part 1 typo. -->
 
-<section class="acknowledgement" aria-label="Acknowledgement of Country">
+<section class="acknowledgement">
     <p>
         MediZen acknowledges the Wurundjeri people of the Kulin Nation as the
         Traditional Owners of the land where we work and study. We pay our

@@ -2,7 +2,7 @@
 <!-- Main navigation menu. Same on every page. -->
 <!-- All links point to .php files (not .html) because we are dynamic now. -->
 
-<nav class="main-nav" aria-label="Main navigation">
+<nav class="main-nav">
     <ul>
         <li><a href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
