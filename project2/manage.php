@@ -46,7 +46,7 @@
 
     <main>
         <!-- TODO: page-specific content goes here -->
-        <h2>TODO Page Heading: Jaxon Task</h2>
+        <h2>Manage</h2>
         <p>Replace this with the real content for this page.</p>
 
         <!--
