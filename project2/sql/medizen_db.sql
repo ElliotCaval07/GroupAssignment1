@@ -26,6 +26,10 @@ CREATE TABLE IF NOT EXISTS test_messages (
     created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS user (
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL
+);
 -- =========================================================================
 -- TODO: real tables (added by each owner in their own PRs)
 -- =========================================================================

@@ -26,16 +26,80 @@
 
     <main>
         <h2>Welcome to MediZen</h2>
-        <p>
-            This is a placeholder home page. Elliot will replace this section
-            with the full Part 1 home content and address the visual feedback
-            from Part 1.
-        </p>
+       
 
         <!-- TODO Elliot: copy in the Part 1 home page content here. -->
         <!-- TODO Elliot: add a company-relevant image (Part 1 feedback). -->
         <!-- TODO Elliot: reduce clutter and improve visual layout (Part 1 feedback). -->
         <!-- TODO Elliot: add one embedded <style> block + one inline style (Part 1 feedback). -->
+           
+    <div class="search">
+<input type="text" placeholder="Search...">
+  <button>Search</button>
+</div class="search">
+    
+</head>
+
+<body> 
+<header>
+   
+    <p>Welcome to Medizen, this page will help direct you to the relevant page you are looking for</p>
+
+</header>
+
+<table>
+    
+    
+    <thead>
+
+        <tr>
+            <th colspan="2">Webpage Contents</th>
+        </tr>
+      <tr>
+        <th>Page Name</th>
+        <th>Contents</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td>Home Page</td>
+        <td>Overview of Medizen</td>
+        
+      </tr>
+      <tr>
+        <td>About Page</td>
+        <td>Learn about how 3 businessmen founded Medizen</td>
+        
+      </tr>
+
+      <tr>
+        <td>Jobs Page</td>
+        <td>What a job at Medizen looks like</td>
+      </tr>
+
+      <tr>
+        <td>Apply Page</td>
+        <td>Where to apply to be a part of our expert team</td>
+      </tr>
+
+      <tr>
+        <td>Manage Page</td>
+        <td>For employees to access our database</td>
+    </tr>
+    </tbody>
+
+    
+</table>
+
+<fieldset>
+    <legend><em>Our Mission</em></legend>
+    <p>
+        Medizen is a health and digital wellness company dedicated to improving access to reliable, user-friendly healthcare solutions across Botswana. Founded by three entrepreneurs with backgrounds in healthcare and technology and business, Medizen combines practical medical insight with innovative digital tools to support individuals and communities. Its platform offers features such as medication reminders, basic health tracking, telehealth consultations, and secure digital health records, all designed to function even in low-connectivity environments. Medizen focuses on simplicity, accessibility, and local relevance, ensuring its services are usable on a wide range of devices and adaptable to different lifestyles. By partnering with clinics and healthcare providers, the company helps streamline patient care while empowering individuals to take control of their health. Medizen’s mission is to bridge the gap between traditional healthcare systems and modern technology, creating a healthier, more connected future for communities across the region.
+    </p>
+</fieldset>
+<img src="images/medizenteam.jpg" alt="Medizen team image" id="teamPic">
+
     </main>
 
     <?php include("includes/acknowledgement.inc"); ?>
