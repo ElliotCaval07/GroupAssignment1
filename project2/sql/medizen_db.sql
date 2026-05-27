@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS user (
     username VARCHAR(50) NOT NULL,
     password VARCHAR(100) NOT NULL
 );
+
+INSERT INTO user (username, password) VALUES ('admin', '$2y$10$ktbEFmsKwNuhAxJkGzcM/.gbfiDE6cyitvAvInpuOE7LAaf0SarHy');
 -- =========================================================================
 -- TODO: real tables (added by each owner in their own PRs)
 -- =========================================================================
