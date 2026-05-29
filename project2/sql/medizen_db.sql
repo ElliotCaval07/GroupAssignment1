@@ -33,13 +33,14 @@ CREATE TABLE IF NOT EXISTS test_messages (
 --                       status ENUM('New','Current','Final')
 
 DROP TABLE IF EXISTS eoi;
+CREATE TABLE eoi (
     EOInumber INT AUTO_INCREMENT PRIMARY KEY,
     job_reference CHAR(5) NOT NULL,
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
     dob DATE NOT NULL,
     gender VARCHAR(10) NOT NULL,
-    street_adress VARCHAR(40) NOT NULL,
+    street_address VARCHAR(40) NOT NULL,
     suburb VARCHAR(40) NOT NULL,
     state VARCHAR(3) NOT NULL,
     postcode CHAR(4) NOT NULL,
