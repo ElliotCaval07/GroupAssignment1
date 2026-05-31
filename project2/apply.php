@@ -119,7 +119,7 @@ $recent_result = mysqli_query($conn, $select_sql);
             <legend>Contact</legend>
             <p>
                 <label for="email">Email *</label>
-                <input type="text" id="email" maxlength="80">
+                <input type="text" id="email" name="email" maxlength="80">
                 <br><small>Valid email adress (e.g. you@example.com).</small>
             </p>
             <p>
