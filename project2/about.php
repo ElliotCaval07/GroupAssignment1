@@ -14,7 +14,9 @@
 //     to use the same modular includes
 
 // TODO: uncomment if this page reads or writes the database
-// require_once("settings.php");
+require_once("settings.php");
+
+$result = mysqli_query($conn, "SELECT * FROM members");
 
 // TODO: run any DB queries this page needs (delete if not needed)
 // $query  = "SELECT * FROM some_table ORDER BY some_column";
@@ -46,8 +48,8 @@
 
     <main>
         <!-- TODO: page-specific content goes here -->
-        <h2>bout us at Medizen</h2>
-        <p>Replace this with the real content for this page.</p>
+        <h2>About us at Medizen</h2>
+        
 
         <!--
             TODO: Part 1 feedback asks for one embedded <style> block
@@ -104,7 +106,7 @@
       border-radius: 10px;
       padding: 10px;
       margin: 20px 0;
-      width: 50%;
+      width: 100%;
     }
 
     /* Member list styling */
@@ -120,8 +122,8 @@
 
   <!-- Group and class details using nested list -->
   <section>
-    <h2 style="text-align: left; color: black; font-size: 1.2em;">Group Details</h2>
-    <ul>
+    <h2 style="text-align: left; color: black; font-size: 1.2em; padding-left: 25px;">Group Details</h2>
+    <ul style="padding-left: 25px;"">
       <li>Group Name
         <ul>
           <li>J.E.K</li>
@@ -140,43 +142,22 @@
   <!-- Member contributions and quotes using definition list -->
   <section>
     <h2 style="text-align: left; color: black; font-size: 1.2em;">Member Contributions</h2>
-    <dl class="member-list">
-
-      <dt>
-        Elliot Caval
-        <span class="student-id">106513795</span>
-      </dt>
-      <dd>
-        <p><strong>Contribution:</strong> Developed index.html, about.html, set up the project structure, and created
-          the
-          shared
-          header and footer.</p>
-        <p><strong>Quote (Indonesian):</strong> <q lang="id">Nama saya Elliot</q></p>
-        <p><strong>English:</strong> <q>My name is Elliot</q></p>
-      </dd>
-
-      <dt>
-        Jaxon Del Mastro
-        <span class="student-id">106523532</span>
-      </dt>
-      <dd>
-        <p><strong>Contribution:</strong> Developed apply.html and jobs.html.</p>
-        <p><strong>Quote (German):</strong> <q lang="de">Guten Morgen</q></p>
-        <p><strong>English:</strong> <q>Good morning</q></p>
-      </dd>
-
-      <dt>
-        Cheoum Lee (Kevin)
-        <span class="student-id">106523655</span>
-      </dt>
-      <dd>
-        <p><strong>Contribution:</strong> Refactored about.html to meet all brief requirements, wrote the page CSS
-          styling, and ran HTML5 and accessibility validation.</p>
-        <p><strong>Quote (Korean):</strong> <q lang="ko">티끌 모아 태산</q></p>
-        <p><strong>English:</strong> <q>Many small drops make a mighty ocean</q></p>
-      </dd>
-
-    </dl>
+   <dl class="member-list">
+    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+        <dt>
+            <?php echo $row['name']; ?>
+            <span class="student-id"><?php echo $row['student_id']; ?></span>
+        </dt>
+        <dd>
+            <p><strong>Contribution Project 1:</strong> <?php echo $row['contribution_project1']; ?></p>
+            <p><strong>Contribution Project 2:</strong> <?php echo $row['contribution_project2']; ?></p>
+            <p><strong>Quote (<?php echo $row['quote_language']; ?>):</strong>
+                <q><?php echo $row['quote']; ?></q>
+            </p>
+            <p><strong>English:</strong> <q><?php echo $row['quote_english']; ?></q></p>
+        </dd>
+    <?php } ?>
+</dl>
   </section>
 
   <!-- Fun facts table with caption -->
@@ -213,7 +194,7 @@
 
   <!-- Team photo (using logo as placeholder) using inline CSS -->
   <figure>
-    <img src="styles/images/MediZenLogo.jpeg" alt="MediZen team logo representing Group J.E.K">
+   <img src="images/MedizenAvengers.jpg" alt="Medizen Webpage Development Team" id="DevPic">
     <figcaption style="font-style: italic;">
       Team J.E.K - the three-person team behind MediZen.
       Bringing together skills in web development, design,

@@ -73,6 +73,24 @@ CREATE TABLE eoi (
 );
 
 -- TODO Elliot (Task 7) - members table with contribution_part1 and
---                        contribution_part2 columns
+--                      contribution_part2 columns
+DROP TABLE IF EXISTS members;
+CREATE TABLE members (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    student_id VARCHAR(20) NOT NULL,
+    quote VARCHAR(255),
+    quote_language VARCHAR(50),
+    quote_english VARCHAR(255),
+    contribution_project1 TEXT,
+    contribution_project2 TEXT
+);
+
+INSERT INTO members (name, student_id, quote, quote_language, quote_english, contribution_project1, contribution_project2)
+VALUES 
+('Elliot Caval', '106513795', 'Nama saya Elliot', 'Indonesian', 'My name is Elliot', 'Developed index.html, about.html, set up the project structure, and created the shared header and footer.', 'Your project 2 contribution here'),
+('Jaxon Del Mastro', '106523532', 'Guten Morgen', 'German', 'Good morning', 'Developed apply.html and jobs.html.', 'Your project 2 contribution here'),
+('Cheoum Lee (Kevin)', '106523655', '티끌 모아 태산', 'Korean', 'Many small drops make a mighty ocean', 'Refactored about.html to meet all brief requirements, wrote the page CSS styling, and ran HTML5 and accessibility validation.', 'Your project 2 contribution here');
+
 -- TODO Jaxon (Task 5)  - jobs table with separate fields (per rubric)
 -- TODO Jaxon (Task 6)  - managers table with hashed passwords
