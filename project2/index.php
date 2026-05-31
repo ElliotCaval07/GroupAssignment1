@@ -33,10 +33,7 @@
         <!-- TODO Elliot: reduce clutter and improve visual layout (Part 1 feedback). -->
         <!-- TODO Elliot: add one embedded <style> block + one inline style (Part 1 feedback). -->
            
-    <div class="search">
-<input type="text" placeholder="Search...">
-  <button>Search</button>
-</div class="search">
+   
     
 </head>
 
@@ -63,28 +60,28 @@
     
     <tbody>
       <tr>
-        <td>Home Page</td>
+        <td><a href="index.php">Home Page</a></td>
         <td>Overview of Medizen</td>
         
       </tr>
       <tr>
-        <td>About Page</td>
+        <td><a href="about.php">About Page</a></td>
         <td>Learn about how 3 businessmen founded Medizen</td>
         
       </tr>
 
       <tr>
-        <td>Jobs Page</td>
+        <td><a href="jobs.php">Jobs Page</a></td>
         <td>What a job at Medizen looks like</td>
       </tr>
 
       <tr>
-        <td>Apply Page</td>
+        <td><a href="apply.php">Apply Page</a></td>
         <td>Where to apply to be a part of our expert team</td>
       </tr>
 
       <tr>
-        <td>Manage Page</td>
+        <td><a href="manage.php">Manage Page</a></td>
         <td>For employees to access our database</td>
     </tr>
     </tbody>
@@ -99,9 +96,9 @@
     </p>
 </fieldset>
 
-  
-<img src="images/medizenteam.jpg" alt="Medizen team image" id="teamPic" >
->
+  <p align="center">
+<img src="images/medizenteam.jpg" alt="Medizen team image" id="teamPic">
+</p>
 
     </main>
 
