@@ -74,7 +74,7 @@
                 </ul>
             </p>
             <p>
-                <legend><h4>requirments</h4></legend> 
+                <legend><h4>Requirments</h4></legend> 
                 <ul>
                     <li>Strong communication and interpersonal skills</li>
                     <li>Empathy and active listening</li>
@@ -109,7 +109,7 @@
                 </ul>
             </p>
             <p>
-                <legend><h4>requirments</h4></legend> 
+                <legend><h4>Requirments</h4></legend> 
                 <ul>
                     <li>High attention to detail</li>
                     <li>Fast and accurate typing skills</li>
