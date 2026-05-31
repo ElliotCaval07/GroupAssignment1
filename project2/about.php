@@ -46,7 +46,7 @@
 
     <main>
         <!-- TODO: page-specific content goes here -->
-        <h2>About us at Medizen</h2>
+        <h2>bout us at Medizen</h2>
         <p>Replace this with the real content for this page.</p>
 
         <!--
