@@ -27,13 +27,14 @@ CREATE TABLE IF NOT EXISTS test_messages (
 );
 
 
-DROP TABLE IF EXISTS user;
-CREATE TABLE user (
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(100) NOT NULL
 );
 
-INSERT INTO user (username, password) VALUES ('admin', '$2y$10$ktbEFmsKwNuhAxJkGzcM/.gbfiDE6cyitvAvInpuOE7LAaf0SarHy');
+INSERT INTO users (id, username, password) VALUES (NULL, 'admin', '$2y$10$ktbEFmsKwNuhAxJkGzcM/.gbfiDE6cyitvAvInpuOE7LAaf0SarHy');
 -- =========================================================================
 -- TODO: real tables (added by each owner in their own PRs)
 -- =========================================================================
@@ -93,6 +94,22 @@ VALUES
 ('Elliot Caval', '106513795', 'Nama saya Elliot', 'Indonesian', 'My name is Elliot', 'Developed index.html, about.html, set up the project structure, and created the shared header and footer.', 'Your project 2 contribution here'),
 ('Jaxon Del Mastro', '106523532', 'Guten Morgen', 'German', 'Good morning', 'Developed apply.html and jobs.html.', 'Your project 2 contribution here'),
 ('Cheoum Lee (Kevin)', '106523655', '티끌 모아 태산', 'Korean', 'Many small drops make a mighty ocean', 'Refactored about.html to meet all brief requirements, wrote the page CSS styling, and ran HTML5 and accessibility validation.', 'Your project 2 contribution here');
+
+
+DROP TABLE IF EXISTS jobs;
+CREATE TABLE `jobs` (
+  id varchar(5) NOT NULL PRIMARY KEY,
+  name varchar(50) NOT NULL,
+  description text NOT NULL,
+  responsibilities text NOT NULL,
+  requirements text NOT NULL,
+  salary int(11) NOT NULL,
+  reports_to varchar(50) NOT NULL
+);
+
+INSERT INTO `jobs` (`id`, `name`, `description`, `responsibilities`, `requirements`, `salary`, `reports_to`) VALUES
+('H5C7B', 'Digital wellness consultant', 'As the digital wellness consultant at mediZen you will act as the face of the company. This position will consist of supporting our clients with all of there health and wellness needs in a professional manner that builds trust in our brand. compassion and interest in helping the wellbeing of otheres is of the highest priority as it is important in assuring the integrity of out services.', 'Provide virtual consultations via video, chat, or phone|Develop personalised wellness plans and goals|Monitor client progress using digital tracking tools|Ensure compliance with privacy and healthcare regulations|', 'Strong communication and interpersonal skills|Empathy and active listening|Understanding of health and wellness principles|', 9000, 'Wellness Program Manager'),
+('JB235', 'Client data entry', 'A Client Data Entry Officer is responsible for accurately inputting, updating, and maintaining client information within digital systems. This role ensures that all records are complete, secure, and accessible to support efficient service delivery.', 'Enter client information into databases and digital systems|Update and maintain accurate client records|Organise and manage digital files and documents|Identify and correct data errors|', 'High attention to detail|Fast and accurate typing skills|Basic computer and data management skills|', 8000, 'Client data Manager');
 
 -- TODO Jaxon (Task 5)  - jobs table with separate fields (per rubric)
 -- TODO Jaxon (Task 6)  - managers table with hashed passwords

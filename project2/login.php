@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     if($conn){  
-        $query = "SELECT password FROM user WHERE username = ?";
+        $query = "SELECT password FROM users WHERE username = ?";
         $stmt = mysqli_prepare($conn, $query);
         mysqli_stmt_bind_param($stmt, "s", $username);
         mysqli_stmt_execute($stmt);
