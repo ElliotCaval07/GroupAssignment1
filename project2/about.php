@@ -33,7 +33,7 @@
     <meta name="author" content="J.E.K Group - MediZen">
 
     <!-- TODO: update the page title -->
-    <title> - MediZen</title>
+    <title> About Us - MediZen</title>
 
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -46,7 +46,7 @@
 
     <main>
         <!-- TODO: page-specific content goes here -->
-        <h2>About us at Medizen</h2>
+        <h2>bout us at Medizen</h2>
         <p>Replace this with the real content for this page.</p>
 
         <!--
