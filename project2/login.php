@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (password_verify($password, $row['password'])){
 
-                header('Location: manage.php');
+                header('Location: manage.php?sort=EOInumber');
                 exit();
 
 
