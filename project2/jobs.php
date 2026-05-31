@@ -49,7 +49,8 @@
 
                 $responibilities = array_filter(explode("|", $row['responsibilities']));
                 $requirements = array_filter(explode("|", $row['requirements']));
-                
+            
+            }
         ?>
 
         <section class="job-pos">
