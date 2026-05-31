@@ -98,7 +98,7 @@
         Medizen is a health and digital wellness company dedicated to improving access to reliable, user-friendly healthcare solutions across Botswana. Founded by three entrepreneurs with backgrounds in healthcare and technology and business, Medizen combines practical medical insight with innovative digital tools to support individuals and communities. Its platform offers features such as medication reminders, basic health tracking, telehealth consultations, and secure digital health records, all designed to function even in low-connectivity environments. Medizen focuses on simplicity, accessibility, and local relevance, ensuring its services are usable on a wide range of devices and adaptable to different lifestyles. By partnering with clinics and healthcare providers, the company helps streamline patient care while empowering individuals to take control of their health. Medizen’s mission is to bridge the gap between traditional healthcare systems and modern technology, creating a healthier, more connected future for communities across the region.
     </p>
 </fieldset>
-<img src="images/medizenteam.jpg" alt="Medizen team image" id="teamPic"  style="display: block; margin: 0 auto;">
+<img src="images/medizenteam.jpg" alt="Medizen team image" id="teamPic">
 
     </main>
 

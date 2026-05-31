@@ -1,24 +1,13 @@
 <?php
-// _page_skeleton.php
-// COPY THIS FILE when creating a new page. Rename it (e.g. about.php),
-// then fill in the TODO markers below.
-//
-// The underscore prefix means "template only, not a real page" - leave
-// it in the repo as a reference. Do not link to it from the nav.
-//
-// Why we keep this structure consistent across every page:
-//   - Viewport meta - mobile responsive (Part 1 feedback)
-//   - Description, keywords, author meta - SEO and accessibility (Part 1 feedback)
-//   - Single shared style.css link (Part 1 feedback - one stylesheet)
-//   - Shared includes - the rubric's 10-pt criterion needs every page
-//     to use the same modular includes
 
-// TODO: uncomment if this page reads or writes the database
-// require_once("settings.php");
+    require_once("settings.php");
 
-// TODO: run any DB queries this page needs (delete if not needed)
-// $query  = "SELECT * FROM some_table ORDER BY some_column";
-// $result = mysqli_query($conn, $query);
+
+    $query  = "SELECT * FROM jobs";
+    $result = mysqli_query($conn, $query);
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +43,14 @@
             </p>
         </aside>
 
+        <?php
+
+            while ($row = mysqli_fetch_assoc($result)) {
+
+                $responibilities = array_filter(explode("|", $row['responsibilities']));
+                $requirements = array_filter(explode("|", $row['requirements']));
+                
+        ?>
 
         <section class="job-pos">
             <h3 class="centred">Digital wellness consultant</h3>
@@ -74,7 +71,7 @@
                 </ul>
             </p>
             <p>
-                <legend><h4>Requirments</h4></legend> 
+                <legend><h4>requirments</h4></legend> 
                 <ul>
                     <li>Strong communication and interpersonal skills</li>
                     <li>Empathy and active listening</li>
@@ -82,14 +79,14 @@
                 </ul>
             </p>
 
-            <br>
+                <br>
 
-            <p><strong>Salary: </strong>9,000 monthly</p>
+                <p><strong>Salary: </strong>$<?php echo $row['salary']; ?> monthly</p>
 
-            <p><strong>Reports to: </strong>Wellness Program Manager</p>
+                <p><strong>Reports to: </strong><?php echo $row['reports_to']; ?></p>                                    
             
-        </section>
-        <br>
+            </section>
+            <br>
 
         <section class="job-pos">
             <h3 class="centred">Client data entry</h3>
@@ -109,7 +106,7 @@
                 </ul>
             </p>
             <p>
-                <legend><h4>Requirments</h4></legend> 
+                <legend><h4>requirments</h4></legend> 
                 <ul>
                     <li>High attention to detail</li>
                     <li>Fast and accurate typing skills</li>
@@ -140,8 +137,7 @@
     <?php include("includes/footer.inc"); ?>
 
     <?php
-    // TODO: close the DB connection if this page used one
-    // if (isset($conn)) { mysqli_close($conn); }
+        if (isset($conn)) { mysqli_close($conn); }
     ?>
 </body>
 </html>
