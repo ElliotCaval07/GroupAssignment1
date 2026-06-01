@@ -3,51 +3,6 @@
 // EOI (Expression of Interest) form.
 // ALL HTML5 client-side validation is disabled per the brief.
 // ALL checks happen on the server in process_eoi.php.
-
-require_once("settings.php");
-
-// Sanitise function from Week 7 PHP2 lecture
-function sanitise_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-// Create the test table if it does not exist yet
-$sql = "CREATE TABLE IF NOT EXISTS test_messages (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    message VARCHAR(200),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)";
-mysqli_query($conn, $sql);
-
-// Handle the form submission
-$submit_status = "";
-if (isset($_POST['name'])) {
-    // Clean the inputs 
-    $name = sanitise_input($_POST['name']);
-    $message = sanitise_input($_POST['message']);
-
-    // Escape for SQL to block SQL injection
-    $name = mysqli_real_escape_string($conn, $name);
-    $message = mysqli_real_escape_string($conn, $message);
-
-    // Save to the database (Week 10 INSERT pattern)
-    $insert_sql = "INSERT INTO test_messages (name, message) VALUES ('$name', '$message')";
-    $result = mysqli_query($conn, $insert_sql);
-
-    if ($result) {
-        $submit_status = "Saved! Your test entry has been added to the database.";
-    } else {
-        $submit_status = "Save failed: " . mysqli_error($conn);
-    }
-}
-
-// Get the latest 5 test entries (Week 9 SELECT pattern)
-$select_sql = "SELECT * FROM test_messages ORDER BY id DESC LIMIT 5";
-$recent_result = mysqli_query($conn, $select_sql);
 ?>
 
 
@@ -119,8 +74,8 @@ $recent_result = mysqli_query($conn, $select_sql);
             <legend>Contact</legend>
             <p>
                 <label for="email">Email *</label>
-                <input type="text" id="email" maxlength="80">
-                <br><small>Valid email adress (e.g. you@example.com).</small>
+                <input type="text" id="email" name="email" maxlength="80">
+                <br><small>Valid email address (e.g. you@example.com).</small>
             </p>
             <p>
                 <label for="phone">Phone Number *</label>
