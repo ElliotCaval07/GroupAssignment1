@@ -1,10 +1,25 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
     require_once("settings.php");
 
+    if (isset($_POST['searchJob'])) {
+        $jobRef = $_POST['searchJobSelect'];
 
-    $query  = "SELECT * FROM jobs";
-    $result = mysqli_query($conn, $query);
+        $stmt = mysqli_prepare($conn, "SELECT * FROM jobs WHERE id = ?");
+
+        mysqli_stmt_bind_param($stmt, "s", $jobRef);
+        mysqli_stmt_execute($stmt);
+
+        $result = mysqli_stmt_get_result($stmt);
+
+    }else{
+        $query  = "SELECT * FROM jobs";
+        $result = mysqli_query($conn, $query);
+    }
+
+    
 
 
 
@@ -42,6 +57,18 @@
                 found in the footer of the the website to provide a resume.
             </p>
         </aside>
+
+        <div>
+
+            <form method="post">
+                <input type="text" name="searchJobSelect" placeholder="Job reference number...">
+
+                <button type="submit" name="searchJob">
+                    Search
+                </button>
+            </form>
+
+        </div>
 
         <?php
 
@@ -83,14 +110,32 @@
                 <p><strong>Reports to: </strong><?php echo $row['reports_to']; ?></p>
         </section>
 
-        <br>
+
 
 
         <?php
             }
         ?>
+
+        <?php if (isset($result) && mysqli_num_rows($result) == 0){ ?>
+            <br>
+            <p style="color: red;"><Strong>There are no Available Jobs with that Reference number </strong></p>
+
+        <?php } ?>
+
+        <br>
         <style>
             .centred {text-align: center;}
+
+            button {
+                background-color: #1a5490;
+                color: white;
+                font-size: 12px;
+                padding: 4px 8px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
 
         </style>
     
