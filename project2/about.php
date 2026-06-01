@@ -30,8 +30,8 @@ $result = mysqli_query($conn, "SELECT * FROM members");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- TODO: update these three meta tags for this specific page -->
-    <meta name="description" content="TODO short description of this page">
-    <meta name="keywords" content="TODO, MediZen, comma, separated, keywords">
+    <meta name="description" content="Short description of the development team for this website">
+    <meta name="keywords" content="Team contributions, fun facts, group details, image of us">
     <meta name="author" content="J.E.K Group - MediZen">
 
     <!-- TODO: update the page title -->
@@ -194,7 +194,7 @@ $result = mysqli_query($conn, "SELECT * FROM members");
 
   <!-- Team photo (using logo as placeholder) using inline CSS -->
   <figure>
-   <img src="images/MedizenAvengers.jpg" alt="Medizen Webpage Development Team" id="DevPic">
+   <img src="images/MedizenAvengers.jpg" alt="Medizen Webpage Development Team" id="DevPic" style="display: block; margin: 0 auto;">
     <figcaption style="font-style: italic;">
       Team J.E.K - the three-person team behind MediZen.
       Bringing together skills in web development, design,
