@@ -11,8 +11,8 @@
 
     function buildUrl($sort) {
         
-        $select = sanitise_input($_GET['select']) ?? "";
-        $where = sanitise_input($_GET['where']) ?? "";
+       $select = isset($_GET['select']) ? sanitise_input($_GET['select']) : "";
+$where = isset($_GET['where']) ? sanitise_input($_GET['where']) : "";
 
         return "?sort=$sort&select=" . urlencode($select) . "&where=" . urlencode($where);
     }
